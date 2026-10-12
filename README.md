@@ -1,0 +1,31 @@
+# BBK Energy Solutions · web
+
+Web ilustrativa de kits solares para el hogar (fase 1, sin compra en línea). Todo el contacto va a un asesor: WhatsApp, asistente web, llamada o el formulario de registro con consentimiento informado.
+
+## Contenido
+
+- `public/index.html`: home con kits, "Encuentra tu kit", "Cómo funciona" por kit, registro y asistente.
+- `public/terminos.html`, `public/privacidad.html`, `public/uso-de-datos.html`: páginas legales (también en `/terminos`, `/privacidad`, `/uso-de-datos`).
+- `public/logo.webp`, `public/favicon.png`, `public/apple-touch-icon.png`.
+- `Dockerfile` + `nginx.conf`: servidor estático nginx en el puerto 80.
+
+## Publicar en EasyPanel
+
+1. En el proyecto de EasyPanel: **+ Service → App**, nombre `bbk-energy-web`.
+2. **Source → GitHub**: este repositorio, rama `main`, ruta `/`.
+3. **Build → Dockerfile** (ruta `Dockerfile`).
+4. **Domains**: añade `bbkenergy.com` y `www.bbkenergy.com`, puerto **80**, HTTPS activado.
+5. **Deploy**. Activa *Auto Deploy* para que cada push a `main` se publique solo.
+6. En el DNS del dominio, apunta `A @` y `CNAME www` (o `A www`) a la IP del servidor de EasyPanel.
+
+## Probar en local
+
+```sh
+docker build -t bbk-energy-web . && docker run --rm -p 8080:80 bbk-energy-web
+# abrir http://localhost:8080
+```
+
+## Pendiente para producción
+
+- Conectar el formulario de registro y el asistente a un CRM o endpoint (hoy no envían datos).
+- Guardar con cada registro la fecha, la hora y el texto exacto del consentimiento (Telnyx/10DLC).
