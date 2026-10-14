@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.bbkenergy.com/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://www.bbkenergy.com/og-image.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bbkenergy.com/img/kit1.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.bbkenergy.com/img/kit2.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.bbkenergy.com/img/kit3.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.bbkenergy.com/img/kit4.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.bbkenergy.com/img/kit5.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.bbkenergy.com/img/kit6.webp</image:loc></image:image>
+  </url>
+  <url><loc>https://www.bbkenergy.com/terminos.html</loc><lastmod>2026-10-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.bbkenergy.com/privacidad.html</loc><lastmod>2026-10-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.bbkenergy.com/uso-de-datos.html</loc><lastmod>2026-10-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

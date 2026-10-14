@@ -25,7 +25,23 @@ docker build -t bbk-energy-web . && docker run --rm -p 8080:80 bbk-energy-web
 # abrir http://localhost:8080
 ```
 
-## Pendiente para producción
+## SEO y vista previa de enlaces
 
-- Conectar el formulario de registro y el asistente a un CRM o endpoint (hoy no envían datos).
-- Guardar con cada registro la fecha, la hora y el texto exacto del consentimiento (Telnyx/10DLC).
+- Título, descripción, `canonical` (https://www.bbkenergy.com/), Open Graph y Twitter Card en todas las páginas.
+- `og-image.jpg` (1200 × 630) es la imagen que muestran WhatsApp, SMS, Facebook y X al compartir el enlace.
+- Datos estructurados JSON-LD: organización (dirección, teléfono, horario, redes), web, los 6 kits con precio y las preguntas frecuentes.
+- `robots.txt`, `sitemap.xml`, `site.webmanifest`, favicon e iconos.
+- nginx redirige `bbkenergy.com` a `www.bbkenergy.com` para que Google vea una sola dirección.
+
+## Reglas de contenido
+
+- Hora de referencia: La Habana (HAV, `America/Havana`). La simulación solar usa La Habana.
+- Asesoría humana en línea de 7:00 a 22:30 (HAV); fuera de ese horario, "Asistente virtual en línea".
+- No se cobra nada hasta que el kit esté instalado y funcionando; se acepta tarjeta de crédito.
+- Financiamiento solo para personas que viven y trabajan en EE. UU.
+- Testimonios ocultos (`#clientes`) hasta tener al menos 10 comentarios reales.
+
+## Pendiente
+
+- El formulario de registro y la llamada del chat abren WhatsApp con los datos y el consentimiento. Falta guardarlos en un CRM o backend con fecha, hora y texto exacto del consentimiento (Telnyx/10DLC).
+- Formulario para recoger testimonios de clientes.
