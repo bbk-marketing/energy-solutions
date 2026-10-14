@@ -1,0 +1,10 @@
+/* EQUIPO */
+Empresa: BBK Energy Solutions
+Contacto: info@bbkenergy.com
+Teléfono: +1 (239) 610-4193
+Ubicación: Estero, Florida, EE. UU.
+
+/* SITIO */
+Idioma: español
+Tecnología: HTML, CSS y JavaScript estáticos servidos con nginx
+Última actualización: 2026/10/14

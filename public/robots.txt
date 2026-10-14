@@ -1,4 +1,25 @@
+# BBK Energy Solutions
 User-agent: *
 Allow: /
 
+# Buscadores y asistentes de IA: acceso permitido a todo el sitio
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Google-Extended
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: facebookexternalhit
+User-agent: WhatsApp
+Allow: /
+
+# Resumen para modelos de lenguaje: https://www.bbkenergy.com/llms.txt
 Sitemap: https://www.bbkenergy.com/sitemap.xml

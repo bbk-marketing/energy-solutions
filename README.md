@@ -32,6 +32,8 @@ docker build -t bbk-energy-web . && docker run --rm -p 8080:80 bbk-energy-web
 - Datos estructurados JSON-LD: organización (dirección, teléfono, horario, redes), web, los 6 kits con precio y las preguntas frecuentes.
 - `robots.txt`, `sitemap.xml`, `site.webmanifest`, favicon e iconos.
 - nginx redirige `bbkenergy.com` a `www.bbkenergy.com` para que Google vea una sola dirección.
+- Mientras el dominio no apunte a EasyPanel, nginx reescribe `og:image`, `twitter:image` y `og:url` con el dominio desde el que se abre la página, para que la vista previa funcione también en el dominio de prueba. El `canonical` siempre queda en www.
+- Archivos para IA y descubrimiento: `llms.txt` (resumen del negocio, kits y contacto para ChatGPT, Claude, Perplexity, etc.), `robots.txt` con los rastreadores de IA permitidos, `humans.txt` y `.well-known/security.txt`.
 
 ## Reglas de contenido
 
