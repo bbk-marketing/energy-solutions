@@ -35,6 +35,11 @@ docker build -t bbk-energy-web . && docker run --rm -p 8080:80 bbk-energy-web
 - Mientras el dominio no apunte a EasyPanel, nginx reescribe `og:image`, `twitter:image` y `og:url` con el dominio desde el que se abre la página, para que la vista previa funcione también en el dominio de prueba. El `canonical` siempre queda en www.
 - Archivos para IA y descubrimiento: `llms.txt` (resumen del negocio, kits y contacto para ChatGPT, Claude, Perplexity, etc.), `robots.txt` con los rastreadores de IA permitidos, `humans.txt` y `.well-known/security.txt`.
 
+## Google Analytics
+
+- `public/analytics.js` carga GA4 con aviso de cookies (Consent Mode v2): no se guardan cookies de analítica hasta que el visitante pulsa "Aceptar".
+- Para activarlo, pon el ID de medición (`G-…`) en `GA_ID` dentro de `analytics.js` y vuelve a implementar. Vacío, no se carga nada ni aparece el aviso.
+
 ## Reglas de contenido
 
 - Hora de referencia: La Habana (HAV, `America/Havana`). La simulación solar usa La Habana.
