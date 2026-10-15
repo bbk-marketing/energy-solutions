@@ -363,7 +363,7 @@
 :root.hc{--line:rgba(255,255,255,.55);--muted:#D3DCE5;--deck:#000;--deck-2:#0A0A0A;--night:#000}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{background:var(--night);color:var(--text);font-family:var(--f-body);font-size:16px;line-height:1.55;overflow-x:hidden}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--volt);outline-offset:3px;border-radius:6px}
@@ -411,6 +411,7 @@ nav.links a:hover{color:var(--text)}
 .btn-sm{padding:10px 16px;font-size:14px}
 .ico{width:18px;height:18px;flex:none}
 .menu-btn{display:none}
+.nav-cta{display:none}
 
 /* hero */
 .hero{position:relative;padding-block:56px 40px}
@@ -626,6 +627,9 @@ footer{border-top:1px solid var(--line);margin-top:72px;padding-block:40px 120px
 @media (max-width:1020px){
   nav.links{display:none}
   .menu-btn{display:inline-flex;margin-left:auto}
+  header.nav.open nav.links{display:flex;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;margin:0;padding:6px 16px 18px;background:var(--night);border-bottom:1px solid var(--line);box-shadow:0 18px 40px -12px rgba(0,0,0,.6);max-height:calc(100vh - 80px);overflow-y:auto}
+  header.nav.open nav.links a{padding:15px 4px;border-bottom:1px solid var(--line);font-size:17px;color:var(--text)}
+  header.nav.open .nav-cta{display:inline-flex;margin-top:16px;width:100%}
   .hero .wrap{grid-template-columns:1fr}
   .kits{grid-template-columns:repeat(2,1fr)}
   .finder{grid-template-columns:1fr}
@@ -893,15 +897,16 @@ html.lock{overflow:hidden}
 <header class="nav">
   <div class="wrap">
     <a class="logo" href="#top"><img class="logo-img" src="logo.webp" width="219" height="96" alt="BBK Energy Solutions"></a>
-    <nav class="links" aria-label="Principal">
+    <nav class="links" id="nav-links" aria-label="Principal">
       <a href="#kits">Kits</a>
       <a href="#finder">Encuentra tu kit</a>
       <a href="#afiliados">Afiliados</a>
       <a href="#faq">Preguntas</a>
       <a href="#registro">Registro</a>
+      <button class="btn btn-sun nav-cta" type="button" data-open-chat>Hablar con un asesor</button>
     </nav>
     <span class="lang"><b>ES</b> / EN</span>
-    <button class="btn btn-ghost btn-sm menu-btn" type="button" aria-label="Abrir menú">Menú</button>
+    <button class="btn btn-ghost btn-sm menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">Menú</button>
     <button class="btn btn-sun btn-sm" type="button" data-open-chat>Hablar con un asesor</button>
   </div>
 </header>
@@ -1828,6 +1833,23 @@ html.lock{overflow:hidden}
   document.getElementById("chat-close").onclick=function(){ chat.hidden=true; };
 
   window.__bbk={KITS:KITS,PRESETS:PRESETS,preset:preset,check:check,bestKit:bestKit};
+})();
+
+/* menú móvil */
+(function(){
+  var nav=document.querySelector("header.nav"), btn=nav&&nav.querySelector(".menu-btn");
+  if(!btn) return;
+  function set(open){
+    nav.classList.toggle("open",open);
+    btn.setAttribute("aria-expanded",open?"true":"false");
+    btn.setAttribute("aria-label",open?"Cerrar menú":"Abrir menú");
+    btn.textContent=open?"Cerrar":"Menú";
+  }
+  btn.addEventListener("click",function(e){ e.stopPropagation(); set(!nav.classList.contains("open")); });
+  nav.querySelector("nav.links").addEventListener("click",function(e){ if(e.target.closest("a,button")) set(false); });
+  document.addEventListener("click",function(e){ if(nav.classList.contains("open") && !nav.contains(e.target)) set(false); });
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape" && nav.classList.contains("open")){ set(false); btn.focus(); } });
+  window.addEventListener("resize",function(){ if(window.innerWidth>1020 && nav.classList.contains("open")) set(false); });
 })();
 </script>
 
