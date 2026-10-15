@@ -2,7 +2,7 @@
    Para activarlo, pon aquí el ID de medición de tu propiedad (G-XXXXXXXXXX).
    Mientras esté vacío, no se carga nada ni aparece el aviso. */
 (function () {
-  var GA_ID = "";
+  var GA_ID = "G-0ZETBXLRR2";
   if (!GA_ID) return;
 
   var KEY = "bbk-cookies";
