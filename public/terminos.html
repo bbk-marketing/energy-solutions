@@ -47,7 +47,18 @@ ul{padding-left:20px} li{margin:4px 0}
 .social{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.social a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:#EEF3F8;text-decoration:none;font-size:13.5px}.social a:hover{border-color:var(--sun);color:var(--sun)}
 footer{max-width:860px;margin:0 auto;padding:0 16px 40px;font-size:13px;color:var(--muted)}
 @media (max-width:560px){.toc ol{columns:1} .back span.long{display:none}}
-</style><script src="analytics.js" defer></script>
+</style><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0ZETBXLRR2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var bbkC = null; try { bbkC = localStorage.getItem("bbk-cookies"); } catch (e) {}
+  gtag("consent", "default", {analytics_storage: bbkC === "granted" ? "granted" : "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", wait_for_update: 500});
+  gtag("js", new Date());
+
+  gtag("config", "G-0ZETBXLRR2");
+</script>
+<script src="analytics.js" defer></script>
 </head>
 <body>
 <header><div class="bar"><a href="./" aria-label="BBK Energy, inicio"><img src="logo.webp" width="219" height="96" alt="BBK Energy Solutions"></a><a class="back" href="./" onclick="if(window.opener){window.close();if(!window.closed)return true;return false;}">← Volver<span class="long">&nbsp;a la web</span></a></div></header>

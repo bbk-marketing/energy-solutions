@@ -1,31 +1,12 @@
-/* Google Analytics 4 con aviso de cookies (Consent Mode v2).
-   Para activarlo, pon aquí el ID de medición de tu propiedad (G-XXXXXXXXXX).
-   Mientras esté vacío, no se carga nada ni aparece el aviso. */
+/* Aviso de cookies para Google Analytics 4 (Consent Mode v2).
+   La etiqueta de Google (ID G-0ZETBXLRR2) está en el <head> de cada página y
+   arranca sin cookies; aquí solo se muestra el aviso y se guarda la elección. */
 (function () {
-  var GA_ID = "G-0ZETBXLRR2";
-  if (!GA_ID) return;
-
+  if (typeof window.gtag !== "function") return;
+  var gtag = window.gtag;
   var KEY = "bbk-cookies";
   function getChoice() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function setChoice(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
-
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  window.gtag = gtag;
-
-  var choice = getChoice();
-  gtag("consent", "default", {
-    analytics_storage: choice === "granted" ? "granted" : "denied",
-    ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied",
-    wait_for_update: 500
-  });
-  gtag("js", new Date());
-  gtag("config", GA_ID, { anonymize_ip: true });
-
-  var s = document.createElement("script");
-  s.async = true;
-  s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
-  document.head.appendChild(s);
 
   function decide(v) {
     setChoice(v);
@@ -63,7 +44,7 @@
   }
 
   window.bbkCookies = function () { showBar(); };
-  if (!choice) {
+  if (!getChoice()) {
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", showBar);
     else showBar();
   }

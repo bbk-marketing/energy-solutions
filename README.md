@@ -37,8 +37,8 @@ docker build -t bbk-energy-web . && docker run --rm -p 8080:80 bbk-energy-web
 
 ## Google Analytics
 
-- `public/analytics.js` carga GA4 con aviso de cookies (Consent Mode v2): no se guardan cookies de analítica hasta que el visitante pulsa "Aceptar".
-- ID de medición: `G-0ZETBXLRR2` (cuenta "BBK Energy Solutions", propiedad "BBK Energy Web"), en `GA_ID` dentro de `analytics.js`. Si se deja vacío, no se carga nada ni aparece el aviso.
+- GA4 con aviso de cookies (Consent Mode v2): no se guardan cookies de analítica hasta que el visitante pulsa "Aceptar".
+- ID de medición: `G-0ZETBXLRR2` (cuenta "BBK Energy Solutions", propiedad "BBK Energy Web"). La etiqueta de Google está escrita en el `<head>` de cada página (con el consentimiento por defecto denegado) para que Google la detecte; `analytics.js` solo muestra el aviso y guarda la elección.
 
 ## Reglas de contenido
 
