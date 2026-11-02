@@ -13,12 +13,14 @@ Datos clave:
 
 ## Kits
 
-- [Kit 1, USD 2,200](https://www.bbkenergy.com/#kits): inversor híbrido 3,6 kW 24 V, 1 batería LiFePO4 24 V 100 Ah (2,4 kWh), 2 paneles de 550 W.
-- [Kit 2, USD 2,800](https://www.bbkenergy.com/#kits): inversor híbrido 4 kW 24 V, 1 batería LiFePO4 24 V 100 Ah (2,4 kWh), 4 paneles de 550 W.
-- [Kit 3, USD 3,300](https://www.bbkenergy.com/#kits): inversor híbrido 4 kW 24 V, 2 baterías LiFePO4 24 V 100 Ah (4,8 kWh), 4 paneles de 550 W.
-- [Kit 4, USD 4,300](https://www.bbkenergy.com/#kits): inversor híbrido 4 kW 24 V, 3 baterías LiFePO4 24 V 100 Ah (7,2 kWh), 5 paneles de 550 W.
-- [Kit 5, USD 8,140](https://www.bbkenergy.com/#kits): inversor híbrido 5 kW 48 V 110/220 V, 1 batería LiFePO4 51,2 V 314 Ah (16 kWh), 6 paneles de 550 W. Admite aire acondicionado.
-- [Kit 6, USD 12,430](https://www.bbkenergy.com/#kits): inversor híbrido 12 kW 48 V 110/220 V, 2 baterías LiFePO4 51,2 V 314 Ah (32 kWh), 8 paneles de 550 W. Admite aire acondicionado.
+Oferta Black Friday adelantado del 1 al 15 de noviembre de 2026 (hasta las 11:59 p. m., hora de La Habana). Después rigen los precios regulares.
+
+- [Kit 1, USD 1,870 en oferta, antes USD 2,200](https://www.bbkenergy.com/#kits): inversor híbrido 3,6 kW 24 V, 1 batería LiFePO4 24 V 100 Ah (2,4 kWh), 2 paneles de 550 W.
+- [Kit 2, USD 2,200 en oferta, antes USD 2,800](https://www.bbkenergy.com/#kits): inversor híbrido 4 kW 24 V, 1 batería LiFePO4 24 V 100 Ah (2,4 kWh), 4 paneles de 550 W.
+- [Kit 3, USD 2,860 en oferta, antes USD 3,300](https://www.bbkenergy.com/#kits): inversor híbrido 4 kW 24 V, 2 baterías LiFePO4 24 V 100 Ah (4,8 kWh), 4 paneles de 550 W.
+- [Kit 4, USD 3,850 en oferta, antes USD 4,300](https://www.bbkenergy.com/#kits): inversor híbrido 4 kW 24 V, 3 baterías LiFePO4 24 V 100 Ah (7,2 kWh), 5 paneles de 550 W.
+- [Kit 5, USD 6,380 en oferta, antes USD 8,140](https://www.bbkenergy.com/#kits): inversor híbrido 5 kW 48 V 110/220 V, 1 batería LiFePO4 51,2 V 314 Ah (16 kWh), 6 paneles de 550 W. Admite aire acondicionado.
+- [Kit 6, USD 10,890 en oferta, antes USD 12,430](https://www.bbkenergy.com/#kits): inversor híbrido 12 kW 48 V 110/220 V, 2 baterías LiFePO4 51,2 V 314 Ah (32 kWh), 8 paneles de 550 W, alarma contra intrusos con detector de movimiento. Admite aire acondicionado.
 
 Solo los kits 5 y 6 admiten aire acondicionado.
 
